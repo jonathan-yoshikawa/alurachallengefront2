@@ -1,0 +1,62 @@
+.MenuLateral .title {
+  font-family: Inter sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+
+.MenuLateral ul {
+  list-style: none;
+  padding: 0;
+}
+
+.MenuLateral a {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+.MenuLateral .itemMenuIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  margin-right: 16px;
+
+  background: rgba(80, 129, 251, 0.16);
+  border-radius: 16px;
+}
+
+.MenuLateral .itemMenuIcon img {
+  width: 20px;
+}
+
+.MenuLateral a .itemMenuIcon,
+.MenuLateral a .itemMenuText {
+  opacity: 0.56;
+}
+
+.MenuLateral .itemMenuText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.active > .itemMenuText {
+  opacity: 1 !important;
+}
+
+.active > .itemMenuIcon {
+  background: #5081fb;
+  opacity: 1 !important;
+}

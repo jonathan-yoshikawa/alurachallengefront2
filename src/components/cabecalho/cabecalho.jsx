@@ -1,5 +1,5 @@
 import React from "react";
-import "./cabecalho.css";
+import "./Cabecalho.css";
 
 import logo from "../../assets/images/logo.png";
 import fotoPerfil from "../../assets/images/foto-perfil.png";
