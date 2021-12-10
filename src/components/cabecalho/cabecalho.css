@@ -3,20 +3,6 @@
   margin-left: -14px;
 }
 
-.Cabecalho .barra-pesquisa input {
-  height: 52px;
-  width: 90%;
-  outline: none;
-  border: none;
-  background: rgba(255, 255, 255, 0.16);
-  border-radius: 8px;
-  color: #ffffff;
-  opacity: 0.64;
-  padding: 14px;
-  font-size: 16px;
-  line-height: 24px;
-}
-
 .Cabecalho .perfil img {
   max-width: 150px;
   margin-top: -10px;

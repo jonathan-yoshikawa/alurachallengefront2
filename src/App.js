@@ -3,6 +3,7 @@ import "./App.css";
 import Cabecalho from "./components/cabecalho/Cabecalho";
 import Comunidade from "./components/comunidade/Comunidade";
 import Editor from "./components/editor/Editor";
+import MenuLateralDireito from "./components/menu-lateral-direito/MenuLateralDireito";
 import MenuLateral from "./components/menu-lateral/MenuLateral";
 
 function App() {
@@ -12,10 +13,10 @@ function App() {
         <Cabecalho />
       </header>
       <section className="content row mt-3">
-        <div className="col-md-2">
+        <div className="col-lg-2">
           <MenuLateral />
         </div>
-        <div className="col-md-8 d-flex justify-content-center">
+        <div className="col-lg-7 d-flex justify-content-center">
           <div className="main-content">
             <Routes>
               <Route path="/" element={<Editor />} />
@@ -24,7 +25,9 @@ function App() {
             </Routes>
           </div>
         </div>
-        <div className="col-md-2"> Lateral 2 </div>
+        <div className="col-lg-3">
+          <MenuLateralDireito />
+        </div>
       </section>
       <footer className="row">
         <span className="col-12 d-flex justify-content-center">
