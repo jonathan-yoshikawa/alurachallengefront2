@@ -1,0 +1,61 @@
+.Editor {
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.Editor .editorTexto {
+  background-color: #141414;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.Editor .circles {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.Editor .redCircle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff5f56;
+}
+
+.Editor .yellowCircle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ffbd2e;
+  margin-left: 8px;
+}
+
+.Editor .greenCircle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #27c93f;
+  margin-left: 8px;
+}
+
+.Editor .editorTexto .textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #141414;
+  height: auto;
+  min-height: 250px;
+}
+
+.visualizarHighlight {
+  width: 100%;
+  height: 56px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  background: rgba(80, 129, 251, 0.08);
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 16px;
+}

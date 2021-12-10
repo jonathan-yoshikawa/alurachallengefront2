@@ -12,7 +12,7 @@ export default function MenuLateral() {
       <h2 className="title">Menu</h2>
       <ul>
         <li>
-          <NavLink to="/editor" activeclassname="active">
+          <NavLink to="/" activeclassname="active">
             <div className="itemMenuIcon">
               <img src={editor} alt="editor" />
             </div>
