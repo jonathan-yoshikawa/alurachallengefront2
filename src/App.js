@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Cabecalho from "./components/cabecalho/Cabecalho";
-import Comunidade from "./components/comunidade/Comunidade";
-import Editor from "./components/editor/Editor";
+import Comunidade from "./pages/comunidade/Comunidade";
+import Editor from "./pages/editor/Editor";
 import MenuLateralDireito from "./components/menu-lateral-direito/MenuLateralDireito";
 import MenuLateral from "./components/menu-lateral/MenuLateral";
 
