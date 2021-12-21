@@ -28,9 +28,9 @@ export default function MenuLateralDireito(props) {
         defaultValue={props.defaultCorFundoEditor}
         onChange={(e) => props.alterarCorFundoEditor(e.target.value)}
       />
-      <input className="myButton" type="button" value="Salvar projeto" />
+      <input className="myButton mb-5" type="button" value="Salvar projeto" />
 
-      <div>{`${linguagem.name || ""} ${linguagem.value || ""}`}</div>
+      {/* <div>{`${linguagem.name || ""} ${linguagem.value || ""}`}</div> */}
     </div>
   );
 }

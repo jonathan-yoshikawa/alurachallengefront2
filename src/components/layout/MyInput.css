@@ -10,3 +10,7 @@
   font-size: 16px;
   line-height: 24px;
 }
+
+.MyInput:hover {
+  background: rgba(255, 255, 255, 0.24);
+}

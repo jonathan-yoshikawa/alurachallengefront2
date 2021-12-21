@@ -11,7 +11,9 @@ export default function Editor(props) {
             <div className="yellowCircle"></div>
             <div className="greenCircle"></div>
           </div>
-          <div className="textarea" contentEditable="true"></div>
+          <div className="textarea" contentEditable="true">
+            console.log("Digite seu código aqui!");
+          </div>
         </div>
       </div>
       <input

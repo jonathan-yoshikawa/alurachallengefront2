@@ -19,10 +19,10 @@ function App() {
         <Cabecalho />
       </header>
       <section className="content row mt-3">
-        <div className="col-lg-2">
+        <div className="col-lg-3">
           <MenuLateral />
         </div>
-        <div className="col-lg-7 d-flex justify-content-center">
+        <div className="col-lg-6 ps-lg-4 pe-lg-4 d-flex justify-content-center">
           <div className="main-content">
             <Routes>
               <Route

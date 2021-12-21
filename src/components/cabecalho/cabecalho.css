@@ -3,7 +3,41 @@
   margin-left: -14px;
 }
 
-.Cabecalho .perfil img {
-  max-width: 150px;
-  margin-top: -10px;
+.Cabecalho .icon-menu img {
+  width: 30px;
+  height: 30px;
+}
+
+.Cabecalho .icon-menu-wrapper {
+  padding: 8px;
+  cursor: pointer;
+  align-self: center;
+  border-radius: 8px;
+}
+
+.Cabecalho .icon-menu-wrapper:hover {
+  background-color: #41536a;
+}
+
+.menuMobile {
+  position: absolute;
+  border-radius: 8px;
+  top: 88px;
+  right: -260px;
+  padding: 24px;
+  background: #2d415b;
+}
+
+.mostrarMenu {
+  animation: mostrarMenu 0.7s;
+  right: 0;
+}
+
+@keyframes mostrarMenu {
+  0% {
+    right: -260px;
+  }
+  100% {
+    right: 0;
+  }
 }
