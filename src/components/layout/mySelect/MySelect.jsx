@@ -8,6 +8,7 @@ export default function MySelect(props) {
       <Select
         styles={customStyles}
         options={props.options}
+        defaultValue={props.options[0]}
         placeholder={"Linguagem..."}
         onChange={(e) => {
           props.setLinguagem({

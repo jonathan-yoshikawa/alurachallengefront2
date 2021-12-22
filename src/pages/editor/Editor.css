@@ -4,7 +4,7 @@
 }
 
 .Editor .editorTexto {
-  background-color: #141414;
+  background-color: #19171c;
   border-radius: 8px;
   padding: 16px;
 }
@@ -37,14 +37,19 @@
   margin-left: 8px;
 }
 
-.Editor .editorTexto .textarea {
+.Editor .editorTexto .codeWrapper {
   width: 100%;
   border: none;
   outline: none;
   color: #fff;
-  background-color: #141414;
+  background-color: #19171c;
   height: auto;
   min-height: 250px;
+}
+
+.hljs {
+  display: flex !important;
+  flex-wrap: wrap !important;
 }
 
 .visualizarHighlight {

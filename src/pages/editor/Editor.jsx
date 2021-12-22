@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Editor.css";
+
+import Highlight from "react-highlight";
 
 export default function Editor(props) {
   const [highlight, setHighlight] = useState(false);
+  const [textCode, setTextCode] = useState("function foo() { return 'bar' }");
+  const refCodeWrapper = useRef("");
 
   function visualizarComHighlight() {
+    console.log(refCodeWrapper);
+    setTextCode(refCodeWrapper.current.textContent);
     setHighlight(!highlight);
   }
 
@@ -17,16 +23,16 @@ export default function Editor(props) {
             <div className="yellowCircle"></div>
             <div className="greenCircle"></div>
           </div>
-          <div className="textarea">
-            <pre>
-              <code
-                class="language-javascript"
-                contenteditable={highlight ? "false" : "true"}
-                aria-label="Editor de código"
-              >
-                console.log("Digite seu código aqui!");
-              </code>
-            </pre>
+          <div
+            className="codeWrapper"
+            contentEditable={highlight ? "false" : "true"}
+            ref={refCodeWrapper}
+          >
+            {highlight ? (
+              <Highlight language="javascript">{textCode}</Highlight>
+            ) : (
+              `${textCode}`
+            )}
           </div>
         </div>
       </div>
