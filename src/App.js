@@ -4,7 +4,7 @@ import "./App.css";
 import Cabecalho from "./components/cabecalho/Cabecalho";
 import Comunidade from "./pages/comunidade/Comunidade";
 import Editor from "./pages/editor/Editor";
-import DetalhesProjeto from "./components/detalhesProjeto/DetalhesProjeto";
+import DetalhesProjeto from "./components/detalhes-projeto/DetalhesProjeto";
 import Menu from "./components/menu/Menu";
 
 function App() {
