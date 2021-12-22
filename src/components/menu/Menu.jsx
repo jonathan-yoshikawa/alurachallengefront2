@@ -1,5 +1,5 @@
 import React from "react";
-import "./MenuLateral.css";
+import "./Menu.css";
 
 import { NavLink } from "react-router-dom";
 

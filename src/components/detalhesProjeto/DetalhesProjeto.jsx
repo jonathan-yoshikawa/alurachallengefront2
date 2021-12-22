@@ -2,10 +2,10 @@ import { useState } from "react";
 import MyInput from "../layout/MyInput";
 import MyTextArea from "../layout/MyTextArea";
 
-import "./MenuLateralDireito.css";
+import "./DetalhesProjeto.css";
 import MySelect from "../layout/mySelect/MySelect";
 
-export default function MenuLateralDireito(props) {
+export default function DetalhesProjeto(props) {
   const [linguagem, setLinguagem] = useState({});
   const options = [
     { value: "JavaScript", label: "JavaScript" },

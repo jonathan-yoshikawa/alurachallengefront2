@@ -59,3 +59,8 @@
   outline: none;
   padding: 16px;
 }
+
+.visualizarHighlightClicked {
+  background: #5081fb;
+  color: #000051;
+}

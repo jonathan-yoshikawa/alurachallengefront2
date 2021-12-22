@@ -10,13 +10,14 @@ import Perfil from "../layout/perfil/Perfil";
 import MenuMobile from "../menu-mobile/MenuMobile";
 
 export default function Cabecalho() {
-  const [menuAberto, setMenuAberto] = useState(false);
+  const [mostrarMenu, setMostrarMenu] = useState(false);
+
   const buttonMenuClicked = () => {
-    setMenuAberto(!menuAberto);
+    setMostrarMenu(!mostrarMenu);
   };
 
   const itemMenuSelecionado = () => {
-    setMenuAberto(false);
+    setMostrarMenu(false);
   };
   return (
     <>
@@ -36,13 +37,16 @@ export default function Cabecalho() {
         </div>
         <div className="icon-menu col-9 d-flex d-lg-none justify-content-end">
           <span className="icon-menu-wrapper" onClick={buttonMenuClicked}>
-            <img src={menuAberto ? closeMenuIcon : barsIcon} alt="perfil"></img>
+            <img
+              src={mostrarMenu ? closeMenuIcon : barsIcon}
+              alt="perfil"
+            ></img>
           </span>
         </div>
       </div>
       <div
         className={`menuMobile d-lg-none justify-content-end ${
-          menuAberto ? "mostrarMenu" : ""
+          mostrarMenu ? "mostrarMenu" : ""
         }`}
       >
         <MenuMobile itemMenuSelecionado={itemMenuSelecionado} />

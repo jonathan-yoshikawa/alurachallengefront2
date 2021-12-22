@@ -4,8 +4,8 @@ import "./App.css";
 import Cabecalho from "./components/cabecalho/Cabecalho";
 import Comunidade from "./pages/comunidade/Comunidade";
 import Editor from "./pages/editor/Editor";
-import MenuLateralDireito from "./components/menu-lateral-direito/MenuLateralDireito";
-import MenuLateral from "./components/menu-lateral/MenuLateral";
+import DetalhesProjeto from "./components/detalhesProjeto/DetalhesProjeto";
+import Menu from "./components/menu/Menu";
 
 function App() {
   const alterarCorFundoEditor = (cor) => {
@@ -20,7 +20,7 @@ function App() {
       </header>
       <section className="content row mt-3">
         <div className="col-lg-3">
-          <MenuLateral />
+          <Menu />
         </div>
         <div className="col-lg-6 ps-lg-4 pe-lg-4 d-flex justify-content-center">
           <div className="main-content">
@@ -34,7 +34,7 @@ function App() {
           </div>
         </div>
         <div className="col-lg-3">
-          <MenuLateralDireito
+          <DetalhesProjeto
             alterarCorFundoEditor={alterarCorFundoEditor}
             defaultCorFundoEditor={corFundoEditor}
           />

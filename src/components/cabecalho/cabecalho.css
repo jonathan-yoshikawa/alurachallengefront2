@@ -26,6 +26,7 @@
   right: -260px;
   padding: 24px;
   background: #2d415b;
+  transition: all 0.7s;
 }
 
 .mostrarMenu {
