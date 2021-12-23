@@ -25,7 +25,7 @@ export default function Cabecalho() {
         <div className="logo col-3">
           <img src={logo} alt="Logo"></img>
         </div>
-        <div className="barra-pesquisa ps-4 pe-4 col-6 d-none d-lg-flex justify-content-center">
+        <div className="barra-pesquisa pe-4 col-6 d-none d-lg-flex justify-content-center">
           <MyInput placeholder="Busque por algo" />
         </div>
         <div className="perfil col-3 d-none d-lg-flex justify-content-end">

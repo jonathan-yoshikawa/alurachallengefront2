@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Comunidade.css";
+
 export default function Comunidade() {
-  return <div>Comunidade</div>;
+  return <div className="Comunidade">Comunidade</div>;
 }
