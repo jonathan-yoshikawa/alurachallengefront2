@@ -7,6 +7,7 @@ export default function MySelect(props) {
     <div>
       <Select
         styles={customStyles}
+        isSearchable={false}
         options={props.options}
         defaultValue={props.options[0]}
         placeholder={"Linguagem..."}

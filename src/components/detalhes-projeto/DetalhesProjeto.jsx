@@ -31,8 +31,6 @@ export default function DetalhesProjeto(props) {
         onChange={(e) => props.alterarCorFundoEditor(e.target.value)}
       />
       <input className="myButton mb-5" type="button" value="Salvar projeto" />
-
-      {/* <div>{`${linguagem.name || ""} ${linguagem.value || ""}`}</div> */}
     </div>
   );
 }
