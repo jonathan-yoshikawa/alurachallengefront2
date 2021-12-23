@@ -1,5 +1,4 @@
 # Alura Challenge  
-Desenvolvido com React
 
 ## https://alurachallengefront2.vercel.app/
 
