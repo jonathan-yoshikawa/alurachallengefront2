@@ -1,4 +1,7 @@
-# https://alurachallengefront2.vercel.app/
+# Alura Challenge  
+Desenvolvido com React
+
+## https://alurachallengefront2.vercel.app/
 
 # Getting Started with Create React App
 
