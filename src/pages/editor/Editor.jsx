@@ -6,27 +6,26 @@ import "highlight.js/styles/base16/dracula.css";
 
 import DetalhesProjeto from "../../components/detalhes-projeto/DetalhesProjeto";
 
-export default function Editor(props) {
-  const alterarCorFundoEditor = (cor) => {
-    setCorFundoEditor(cor);
-  };
-
+export default function Editor() {
   const [corFundoEditor, setCorFundoEditor] = useState("#6BD1FF");
   const [linguagem, setLinguagem] = useState("javascript");
+  const refCodeWrapper = useRef(null);
 
   const mudarLinguagem = (option) => {
     setLinguagem(option.value);
   };
 
-  const refCodeWrapper = useRef(null);
+  const alterarCorFundoEditor = (cor) => {
+    setCorFundoEditor(cor);
+  };
 
-  function visualizarComHighlight() {
+  const visualizarComHighlight = () => {
     let html = hljs.highlight(refCodeWrapper.current.firstChild.innerText, {
       language: linguagem,
     }).value;
 
     refCodeWrapper.current.firstChild.innerHTML = html;
-  }
+  };
 
   return (
     <div className="row">
