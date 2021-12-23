@@ -11,7 +11,7 @@ export default function MySelect(props) {
         defaultValue={props.options[0]}
         placeholder={"Linguagem..."}
         onChange={(e) => {
-          props.setLinguagem({
+          props.mudarLinguagem({
             name: e.label,
             value: e.value,
           });

@@ -4,7 +4,9 @@
 }
 
 .Editor .editorTexto {
-  background-color: #19171c;
+  display: flex;
+  flex-direction: column;
+  background-color: #141414;
   border-radius: 8px;
   padding: 16px;
 }
@@ -42,14 +44,52 @@
   border: none;
   outline: none;
   color: #fff;
-  background-color: #19171c;
+  background-color: #141414;
   height: auto;
   min-height: 250px;
 }
 
+.Editor code {
+  white-space: pre-wrap;
+}
+
+.Editor code.preview {
+  padding: 1rem;
+  color: white;
+}
+
+.Editor .preview {
+  display: block;
+  padding: 0px 2rem;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 100%;
+  max-height: 387px;
+  overflow-y: auto;
+
+  scrollbar-color: #bebcbc #141414;
+  scrollbar-width: thin;
+  background: #141414;
+}
+
+.Editor .preview::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.Editor .preview::-webkit-scrollbar-track {
+  background-color: #bebcbc;
+}
+.Editor .preview::-webkit-scrollbar-thumb {
+  background-color: #141414;
+}
+
+.Editor .preview:focus {
+  border: 0px !important;
+  outline: 0px !important;
+}
+
 .hljs {
-  display: flex !important;
-  flex-wrap: wrap !important;
+  background: #141414 !important;
 }
 
 .visualizarHighlight {
@@ -63,9 +103,4 @@
   border: none;
   outline: none;
   padding: 16px;
-}
-
-.visualizarHighlightClicked {
-  background: #5081fb;
-  color: #000051;
 }

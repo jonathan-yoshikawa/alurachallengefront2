@@ -1,17 +1,18 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import "./Editor.css";
 
-import Highlight from "react-highlight";
+import hljs from "highlight.js";
+import "highlight.js/styles/base16/dracula.css";
 
 export default function Editor(props) {
-  const [highlight, setHighlight] = useState(false);
-  const [textCode, setTextCode] = useState("function foo() { return 'bar' }");
-  const refCodeWrapper = useRef("");
+  const refCodeWrapper = useRef(null);
 
   function visualizarComHighlight() {
-    console.log(refCodeWrapper);
-    setTextCode(refCodeWrapper.current.textContent);
-    setHighlight(!highlight);
+    let html = hljs.highlight(refCodeWrapper.current.firstChild.innerText, {
+      language: props.linguagem,
+    }).value;
+
+    refCodeWrapper.current.firstChild.innerHTML = html;
   }
 
   return (
@@ -23,25 +24,22 @@ export default function Editor(props) {
             <div className="yellowCircle"></div>
             <div className="greenCircle"></div>
           </div>
-          <div
-            className="codeWrapper"
-            contentEditable={highlight ? "false" : "true"}
-            ref={refCodeWrapper}
-          >
-            {highlight ? (
-              <Highlight language="javascript">{textCode}</Highlight>
-            ) : (
-              `${textCode}`
-            )}
+          <div className="codeWrapper" ref={refCodeWrapper}>
+            <code
+              className={`preview hljs ${props.linguagem}`}
+              contentEditable="true"
+              aria-label="editor"
+              suppressContentEditableWarning={true}
+            >
+              {"function foo() { return 'bar' }"}
+            </code>
           </div>
         </div>
       </div>
       <input
         type="button"
-        className={`visualizarHighlight ${
-          highlight ? "visualizarHighlightClicked" : ""
-        }`}
-        value={highlight ? "Voltar a editar" : "Visualizar com o highlight"}
+        className="visualizarHighlight"
+        value="Visualizar com o highlight"
         onClick={visualizarComHighlight}
       />
     </>

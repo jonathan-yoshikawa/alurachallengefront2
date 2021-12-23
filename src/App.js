@@ -13,6 +13,11 @@ function App() {
   };
 
   const [corFundoEditor, setCorFundoEditor] = useState("#6BD1FF");
+  const [linguagem, setLinguagem] = useState("javascript");
+
+  const mudarLinguagem = (option) => {
+    setLinguagem(option.value);
+  };
   return (
     <div className="App">
       <header>
@@ -27,7 +32,12 @@ function App() {
             <Routes>
               <Route
                 path="/"
-                element={<Editor corFundoEditor={corFundoEditor} />}
+                element={
+                  <Editor
+                    corFundoEditor={corFundoEditor}
+                    linguagem={linguagem}
+                  />
+                }
               />
               <Route path="comunidade" element={<Comunidade />} />
             </Routes>
@@ -37,6 +47,7 @@ function App() {
           <DetalhesProjeto
             alterarCorFundoEditor={alterarCorFundoEditor}
             defaultCorFundoEditor={corFundoEditor}
+            mudarLinguagem={mudarLinguagem}
           />
         </div>
       </section>

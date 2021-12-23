@@ -1,4 +1,3 @@
-import { useState } from "react";
 import MyInput from "../layout/MyInput";
 import MyTextArea from "../layout/MyTextArea";
 
@@ -6,12 +5,15 @@ import "./DetalhesProjeto.css";
 import MySelect from "../layout/mySelect/MySelect";
 
 export default function DetalhesProjeto(props) {
-  const [linguagem, setLinguagem] = useState({});
   const options = [
     { value: "JavaScript", label: "JavaScript" },
     { value: "HTML", label: "HTML" },
     { value: "CSS", label: "CSS" },
   ];
+
+  function mudarLinguagem(option) {
+    props.mudarLinguagem(option);
+  }
 
   return (
     <div className="MenuLateralDireito">
@@ -21,7 +23,7 @@ export default function DetalhesProjeto(props) {
         <MyTextArea placeholder="Descrição do seu projeto" />
       </div>
       <h2 className="title">Personalização</h2>
-      <MySelect options={options} setLinguagem={setLinguagem} />
+      <MySelect options={options} mudarLinguagem={mudarLinguagem} />
       <input
         className="colorPicker"
         type="color"
