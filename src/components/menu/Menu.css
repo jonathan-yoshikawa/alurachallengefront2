@@ -47,6 +47,11 @@
   opacity: 0.56;
 }
 
+.MenuLateral a:hover > .itemMenuText,
+.MenuLateral a:hover > .itemMenuIcon {
+  opacity: 1;
+}
+
 .MenuLateral .itemMenuText {
   overflow: hidden;
   text-overflow: ellipsis;
