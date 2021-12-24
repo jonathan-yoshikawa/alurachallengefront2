@@ -19,6 +19,7 @@ export default function DetalhesProjeto(props) {
   const [formSubmited, setFormSubmited] = useState(false);
   const [nomeProjeto, setNomeProjeto] = useState("");
   const [descricaoProjeto, setDescricaoProjeto] = useState("");
+  const [cor, setCor] = useState(props.defaultCorFundoEditor);
 
   function mudarLinguagem(option) {
     props.mudarLinguagem(option);
@@ -29,9 +30,9 @@ export default function DetalhesProjeto(props) {
     setFormSubmited(true);
     if (!nomeProjeto || !descricaoProjeto) return;
     ProjetoService.adicionarProjeto({
-      codigo: `teste`,
+      codigo: props.codigo,
       titulo: nomeProjeto,
-      cor: "blue",
+      cor: cor,
       descricao: descricaoProjeto,
       nome: "Jonathan",
       countComentarios: 0,
@@ -73,7 +74,10 @@ export default function DetalhesProjeto(props) {
           className="colorPicker"
           type="color"
           defaultValue={props.defaultCorFundoEditor}
-          onChange={(e) => props.alterarCorFundoEditor(e.target.value)}
+          onChange={(e) => {
+            setCor(e.target.value);
+            props.alterarCorFundoEditor(e.target.value);
+          }}
         />
         <input className="myButton mb-5" type="submit" value="Salvar projeto" />
       </form>

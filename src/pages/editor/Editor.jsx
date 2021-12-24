@@ -9,6 +9,7 @@ import DetalhesProjeto from "../../components/detalhes-projeto/DetalhesProjeto";
 export default function Editor() {
   const [corFundoEditor, setCorFundoEditor] = useState("#6BD1FF");
   const [linguagem, setLinguagem] = useState("javascript");
+  const [codigo, setCodigo] = useState("function foo() { return 'bar' }");
   const refCodeWrapper = useRef(null);
 
   const mudarLinguagem = (option) => {
@@ -17,6 +18,11 @@ export default function Editor() {
 
   const alterarCorFundoEditor = (cor) => {
     setCorFundoEditor(cor);
+  };
+
+  const alterarCodigo = () => {
+    let texto = refCodeWrapper.current.firstChild.innerText;
+    setCodigo(texto);
   };
 
   const visualizarComHighlight = () => {
@@ -43,6 +49,7 @@ export default function Editor() {
                 contentEditable="true"
                 aria-label="editor"
                 suppressContentEditableWarning={true}
+                onInput={alterarCodigo}
               >
                 {"function foo() { return 'bar' }"}
               </code>
@@ -61,6 +68,7 @@ export default function Editor() {
           alterarCorFundoEditor={alterarCorFundoEditor}
           defaultCorFundoEditor={corFundoEditor}
           mudarLinguagem={mudarLinguagem}
+          codigo={codigo}
         />
       </div>
     </div>
