@@ -1,4 +1,4 @@
-.MenuLateralDireito .title {
+.DetalhesProjeto .title {
   font-family: Inter sans-serif;
   font-size: 12px;
   line-height: 18px;
@@ -8,21 +8,24 @@
   color: #ffffff;
 }
 
-.MenuLateralDireito .my-textarea {
+.DetalhesProjeto .my-textarea {
   margin-top: 16px;
   margin-bottom: 32px;
 }
 
-.MenuLateralDireito .colorPicker {
+.DetalhesProjeto .colorPicker {
   width: 100%;
   height: 52px;
   margin-top: 16px;
   margin-bottom: 0;
   cursor: pointer;
-  padding: 0;
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0.5rem;
+  border: 0.0625rem solid white;
+  border-radius: 8px;
 }
 
-.MenuLateralDireito .myButton {
+.DetalhesProjeto .myButton {
   width: 100%;
   height: 56px;
   background: #5081fb;

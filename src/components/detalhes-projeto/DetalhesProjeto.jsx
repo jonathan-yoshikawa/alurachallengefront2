@@ -16,7 +16,7 @@ export default function DetalhesProjeto(props) {
   }
 
   return (
-    <div className="MenuLateralDireito">
+    <div className="DetalhesProjeto">
       <h2 className="title">Seu projeto</h2>
       <MyInput placeholder="Nome do seu projeto" />
       <div className="my-textarea">
