@@ -47,6 +47,11 @@
   opacity: 0.56;
 }
 
+.MenuMobile a:hover > .itemMenuText,
+.MenuMobile a:hover > .itemMenuIcon {
+  opacity: 1;
+}
+
 .MenuMobile .itemMenuText {
   overflow: hidden;
   white-space: nowrap;

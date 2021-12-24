@@ -19,6 +19,22 @@
   bottom: 8px;
 }
 
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #bababa;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bababa;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bababa;
+}
+
 @media only screen and (max-width: 600px) {
   .App {
     margin: 0;
