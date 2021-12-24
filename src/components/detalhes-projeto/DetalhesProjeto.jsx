@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import MyInput from "../layout/MyInput";
 import MyTextArea from "../layout/MyTextArea";
@@ -8,6 +9,7 @@ import MySelect from "../layout/mySelect/MySelect";
 import ProjetoService from "../../services/ProjetoService";
 
 export default function DetalhesProjeto(props) {
+  let navigate = useNavigate();
   const options = [
     { value: "JavaScript", label: "JavaScript" },
     { value: "HTML", label: "HTML" },
@@ -30,12 +32,12 @@ export default function DetalhesProjeto(props) {
       codigo: `teste`,
       titulo: nomeProjeto,
       cor: "blue",
-      linguagem: "HTML",
       descricao: descricaoProjeto,
       nome: "Jonathan",
       countComentarios: 0,
       countLikes: 0,
     });
+    navigate("/comunidade");
   }
 
   return (

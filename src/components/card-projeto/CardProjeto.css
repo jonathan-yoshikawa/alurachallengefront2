@@ -16,7 +16,8 @@
   background-color: #141414;
   border-radius: 8px;
   padding: 16px;
-  min-height: 300px;
+  min-height: 360px;
+  max-height: 360px;
 }
 
 .CardProjeto .circles {
@@ -68,4 +69,28 @@
 
 .CardProjeto .likeCount {
   cursor: pointer;
+}
+
+.CardProjeto code {
+  white-space: pre-wrap;
+}
+
+.CardProjeto code.preview {
+  color: white;
+}
+
+.CardProjeto .preview {
+  display: block;
+  height: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.CardProjeto .preview::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.CardProjeto .preview:focus {
+  border: 0px !important;
+  outline: 0px !important;
 }

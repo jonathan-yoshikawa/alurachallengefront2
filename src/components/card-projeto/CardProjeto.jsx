@@ -28,7 +28,9 @@ export default function CardProjeto(props) {
             <div className="yellowCircle"></div>
             <div className="greenCircle"></div>
           </div>
-          <div className="codeWrapper">{props.projeto.codigo}</div>
+          <div className="codeWrapper">
+            <code className="preview">{props.projeto.codigo}</code>
+          </div>
         </div>
       </div>
       <div className="p-4">
