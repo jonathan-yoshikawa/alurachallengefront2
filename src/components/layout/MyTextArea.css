@@ -10,6 +10,7 @@
   line-height: 24px;
 }
 
-.MyTextArea:hover {
+.MyTextArea:hover,
+.MyTextArea:focus {
   background: rgba(255, 255, 255, 0.24);
 }
