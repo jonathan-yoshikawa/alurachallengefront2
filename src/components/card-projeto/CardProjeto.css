@@ -67,7 +67,7 @@
   align-items: center;
 }
 
-.CardProjeto .likeCount {
+.CardProjeto .likeCount:hover {
   cursor: pointer;
 }
 
@@ -93,4 +93,10 @@
 .CardProjeto .preview:focus {
   border: 0px !important;
   outline: 0px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .CardProjeto .codigoWrapper {
+    padding: 16px;
+  }
 }
