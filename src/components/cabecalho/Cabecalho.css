@@ -21,24 +21,15 @@
 
 .menuMobile {
   position: absolute;
-  border-radius: 8px;
+  border-radius: 8px 0 0 8px;
   top: 88px;
-  right: -260px;
-  padding: 24px;
+  right: 0;
   background: #2d415b;
   transition: all 0.7s;
+  overflow: hidden;
+  width: 0px;
 }
 
 .mostrarMenu {
-  animation: mostrarMenu 0.7s;
-  right: 0;
-}
-
-@keyframes mostrarMenu {
-  0% {
-    right: -260px;
-  }
-  100% {
-    right: 0;
-  }
+  width: 240px;
 }

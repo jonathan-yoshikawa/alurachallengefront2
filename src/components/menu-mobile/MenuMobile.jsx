@@ -10,7 +10,7 @@ import Perfil from "../layout/perfil/Perfil";
 
 export default function MenuMobile(props) {
   return (
-    <div className="MenuMobile">
+    <div className="MenuMobile p-4">
       <h2 className="title">Menu</h2>
       <ul onClick={props.itemMenuSelecionado}>
         <li>
