@@ -54,13 +54,11 @@
 }
 
 .Editor code.preview {
-  padding: 1rem;
   color: white;
 }
 
 .Editor .preview {
   display: block;
-  padding: 0px 2rem;
   box-sizing: border-box;
   border-radius: 8px;
   height: 100%;
@@ -107,4 +105,10 @@
 
 .visualizarHighlight:hover {
   background: rgba(80, 129, 251, 0.24);
+}
+
+@media only screen and (max-width: 600px) {
+  .Editor {
+    padding: 16px;
+  }
 }
