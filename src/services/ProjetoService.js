@@ -8,6 +8,8 @@ let projetos = [
     linguagem: "JavaScript",
     descricao: "Projeto de teste",
     nome: "Jonathan",
+    countComentarios: 9,
+    countLikes: 3,
   },
   {
     id: 2,
@@ -17,6 +19,8 @@ let projetos = [
     linguagem: "JavaScript",
     descricao: "Projeto de teste 2",
     nome: "Jonathan",
+    countComentarios: 4,
+    countLikes: 7,
   },
   {
     id: 3,
@@ -26,15 +30,8 @@ let projetos = [
     linguagem: "CSS",
     descricao: "Projeto de teste 3",
     nome: "Jonathan",
-  },
-  {
-    id: 4,
-    codigo: `console.log("teste4")`,
-    titulo: "Título teste 4",
-    cor: "pink",
-    linguagem: "HTML",
-    descricao: "Projeto de teste 4",
-    nome: "Jonathan",
+    countComentarios: 13,
+    countLikes: 9,
   },
 ];
 
@@ -46,6 +43,7 @@ const ProjetoService = {
     return projetos.filter((p) => p.id === id);
   },
   adicionarProjeto: function (projeto) {
+    projeto.id = projetos.length + 1;
     projetos.push(projeto);
   },
 };

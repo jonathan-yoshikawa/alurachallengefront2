@@ -34,3 +34,8 @@
   outline: none;
   margin-top: 16px;
 }
+
+.DetalhesProjeto .error {
+  color: red;
+  font-size: 14px;
+}
