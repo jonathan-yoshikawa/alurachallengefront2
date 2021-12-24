@@ -5,8 +5,7 @@
   padding: 16px;
   background-color: #051d3b;
   color: #fff;
-  margin: 16px;
-  min-height: calc(100vh - 32px);
+  margin: 4px;
 }
 
 .App .main-content {
