@@ -6,6 +6,7 @@
   background-color: #051d3b;
   color: #fff;
   margin: 4px;
+  min-height: calc(100vh - 8px);
 }
 
 .App .main-content {
