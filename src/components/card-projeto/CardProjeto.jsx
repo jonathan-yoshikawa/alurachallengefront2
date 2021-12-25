@@ -37,19 +37,15 @@ export default function CardProjeto(props) {
         <div className="tituloProjeto">{props.projeto.titulo}</div>
         <div className="descricaoProjeto">{props.projeto.descricao}</div>
         <div className="detalhesProjeto">
-          <div>
-            <img
-              src={comentarioIcon}
-              alt="comentarioIcon"
-              className="ms-2 me-2"
-            />
+          <div className="count p-2 d-flex">
+            <img src={comentarioIcon} alt="comentarioIcon" className="me-2" />
             {props.projeto.countComentarios}
           </div>
-          <div className="likeCount" onClick={heartClicked}>
+          <div className="count ms-2 p-2 d-flex" onClick={heartClicked}>
             <img
               src={like ? redHeartIcon : heartIcon}
               alt="likeIcon"
-              className="ms-3 me-2"
+              className="me-2"
             />
             {countLike}
           </div>
