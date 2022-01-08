@@ -69,16 +69,22 @@ export default function DetalhesProjeto(props) {
           )}
         </div>
         <h2 className="title">Personalização</h2>
-        <MySelect options={options} mudarLinguagem={mudarLinguagem} />
-        <input
-          className="colorPicker"
-          type="color"
-          defaultValue={props.defaultCorFundoEditor}
-          onChange={(e) => {
-            setCor(e.target.value);
-            props.alterarCorFundoEditor(e.target.value);
-          }}
-        />
+        <div className="row align-items-center justify-content-center">
+          <div className="col-12 col-sm-6 col-lg-12">
+            <MySelect options={options} mudarLinguagem={mudarLinguagem} />
+          </div>
+          <div className="col-12 col-sm-6 col-lg-12 mt-3 mt-sm-0 mt-lg-3">
+            <input
+              className="colorPicker"
+              type="color"
+              defaultValue={props.defaultCorFundoEditor}
+              onChange={(e) => {
+                setCor(e.target.value);
+                props.alterarCorFundoEditor(e.target.value);
+              }}
+            />
+          </div>
+        </div>
         <input className="myButton mb-5" type="submit" value="Salvar projeto" />
       </form>
     </div>

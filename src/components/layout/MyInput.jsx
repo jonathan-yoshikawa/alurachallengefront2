@@ -7,7 +7,7 @@ export default function MyInput(props) {
       className="MyInput"
       placeholder={props.placeholder}
       value={props.value}
-      onChange={(e) => props.alterarNome(e.target.value)}
+      onChange={(e) => props.alterarNome && props.alterarNome(e.target.value)}
     ></input>
   );
 }

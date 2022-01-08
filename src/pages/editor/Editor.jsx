@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Editor.css";
 
 import hljs from "highlight.js";
@@ -9,6 +9,7 @@ import DetalhesProjeto from "../../components/detalhes-projeto/DetalhesProjeto";
 export default function Editor() {
   const [corFundoEditor, setCorFundoEditor] = useState("#6BD1FF");
   const [linguagem, setLinguagem] = useState("javascript");
+  const [highlightClicked, setHighlightClicked] = useState(false);
   const [codigo, setCodigo] = useState("function foo() { return 'bar' }");
   const refCodeWrapper = useRef(null);
 
@@ -25,12 +26,20 @@ export default function Editor() {
     setCodigo(texto);
   };
 
-  const visualizarComHighlight = () => {
-    let html = hljs.highlight(refCodeWrapper.current.firstChild.innerText, {
-      language: linguagem,
-    }).value;
+  useEffect(() => {
+    visualizarHighlight();
+    // eslint-disable-next-line
+  }, [highlightClicked]);
 
-    refCodeWrapper.current.firstChild.innerHTML = html;
+  const visualizarHighlight = () => {
+    let html = codigo;
+
+    if (highlightClicked) {
+      html = hljs.highlight(codigo, {
+        language: linguagem,
+      }).value;
+      refCodeWrapper.current.firstChild.innerHTML = html;
+    } else refCodeWrapper.current.firstChild.innerText = html;
   };
 
   return (
@@ -46,7 +55,7 @@ export default function Editor() {
             <div className="codeWrapper" ref={refCodeWrapper}>
               <code
                 className={`preview hljs ${linguagem}`}
-                contentEditable="true"
+                contentEditable={highlightClicked ? "false" : "true"}
                 aria-label="editor"
                 suppressContentEditableWarning={true}
                 onInput={alterarCodigo}
@@ -59,8 +68,12 @@ export default function Editor() {
         <input
           type="button"
           className="visualizarHighlight"
-          value="Visualizar com o highlight"
-          onClick={visualizarComHighlight}
+          value={
+            highlightClicked
+              ? "Cancelar highlight"
+              : "Visualizar com o highlight"
+          }
+          onClick={() => setHighlightClicked(!highlightClicked)}
         />
       </div>
       <div className="col-lg-4 m-lg-0 p-lg-0">
